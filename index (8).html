@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Kodam</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('your-gif-file.gif'); /* Ganti dengan URL atau path ke file GIF */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        #kodam {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #FFD700;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cek Kodam Anda</h1>
+        <input type="text" id="namaKamu" placeholder="Masukkan nama kamu">
+        <button onclick="cekKodam()">Cek Kodam</button>
+        <div id="kodam">-</div>
+    </div>
+
+    <script>
+        function cekKodam() {
+            const nama = document.getElementById("namaKamu").value;
+            if (nama === "") {
+                alert("Silakan masukkan nama kamu terlebih dahulu.");
+                return;
+            }
+
+            const kodamList = [
+                "Kodam Kentut Gajah", "Kodam Es Batu Panas", "Kodam Matahari Malam", 
+                "Kodam Ikan Terbang", "Kodam Gigi Gingsul", "Kodam Langit Bocor", 
+                "Kodam Angin Ajaib", "Kodam Jenggot Kucing", "Kodam Batu Jalan", 
+                "Kodam Bulan Berenang", "Kodam Awan Tenggelam", "Kodam Sendal Hilang", 
+                "Kodam Telinga Gajah", "Kodam Hidung Belang", "Kodam Kucing Terbang",
+                "Kodam Air Api", "Kodam Daun Besi", "Kodam Jari Lentik", 
+                "Kodam Telinga Kanan", "Kodam Lidah Pisau", "Kodam Jari Kaki", 
+                "Kodam Rambut Putih", "Kodam Kaki Seribu", "Kodam Batu Menari", 
+                "Kodam Ular Berkaki", "Kodam Cumi Bakar", "Kodam Ikan Buntal",
+                "Kodam Hujan Es", "Kodam Tali Sepatu", "Kodam Kepiting Terbang",
+                "Kodam Jembatan Kertas", "Kodam Pohon Besi", "Kodam Daun Terbang",
+                "Kodam Air Laut Manis", "Kodam Langit Terbelah", "Kodam Sungai Mengering", 
+                "Kodam Laut Beras", "Kodam Roti Terbang", "Kodam Bunga Besi",
+                "Kodam Pasir Emas", "Kodam Air Es Panas", "Kodam Api Hujan", 
+                "Kodam Pasir Menari", "Kodam Awan Bergoyang", "Kodam Batu Melayang",
+                "Kodam Gelas Berjalan", "Kodam Kayu Tumbuh", "Kodam Besi Cair", 
+                "Kodam Keris Berpohon", "Kodam Kaca Pecah", "Kodam Daun Menggigit",
+                "Kodam Jalan Hidup", "Kodam Tembok Berbisik", "Kodam Gunting Kertas",
+                "Kodam Pintu Menari", "Kodam Kertas Terbakar", "Kodam Batu Terbang",
+                "Kodam Daun Emas", "Kodam Air Terjun Kering", "Kodam Angin Menghanyut",
+                "Kodam Hujan Daun", "Kodam Batu Menghancur", "Kodam Api Basah",
+                "Kodam Batu Tenggelam", "Kodam Tembok Berlari", "Kodam Tanah Berdiri",
+                "Kodam Kayu Berbicara", "Kodam Pohon Bertarung", "Kodam Daun Menari",
+                "Kodam Air Menguap", "Kodam Kayu Tertawa", "Kodam Batu Berdiri",
+                "Kodam Angin Berteriak", "Kodam Tembok Pecah", "Kodam Hujan Mengering",
+                "Kodam Es Bercahaya", "Kodam Kucing Terbang", "Kodam Angin Menari",
+                "Kodam Daun Menyala", "Kodam Air Laut Mengering"
+            ];
+
+            const randomKodam = kodamList[Math.floor(Math.random() * kodamList.length)];
+
+            document.getElementById("kodam").innerText = randomKodam;
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
